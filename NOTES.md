@@ -3,7 +3,8 @@
 #Zee Drupaleurs
 Pendant cette réunion hebdomadaire, l'un des collaborateurs va présenter
 un module utilisant sur l'un de ses derniers projets.
-Et on va commencer par moi, je vais présenter le module Variable.
+Et je vais commencer cette nouvelle setion par la présentation de 2
+modules CheckListApi et Variables.
 
 
 ## ChecklistAPI
