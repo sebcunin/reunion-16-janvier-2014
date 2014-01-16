@@ -26,6 +26,13 @@ Liens de documentations sur Drupal.org.
 
 Les fonctions [variable_set](https://api.drupal.org/api/drupal/includes!bootstrap.inc/function/variable_set/7), [variable_get](https://api.drupal.org/api/drupal/includes!bootstrap.inc/function/variable_get/7) et [variable_del](https://api.drupal.org/api/drupal/includes!bootstrap.inc/function/variable_del/7)
 
+Lancer une commande Drush pour montrer la rassignation d'une variable avec les commandes 
+
+```
+drush vset,vget,vdel NAME_VARIABLE VALUE_VARIABLE
+```
+
+
 ### Les avantages du module Variable
 - centraliser
 - faciliter d'utilisation 
