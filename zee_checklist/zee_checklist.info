@@ -1,1 +1,6 @@
-name:Zee Checklist
+name = Zee Checklist
+description = @todo
+core = 7.x
+package = Zee
+
+dependencies[] = checklistapi

@@ -1,0 +1,67 @@
+<?php
+
+/**
+* @file zee_checklist.module
+*/
+
+/**
+ * Implements hook_checklistapi_checklist_info().
+ *
+ * Defines a checklist based on
+ * @link http://buytaert.net/drupal-learning-curve Dries Buytaert's Drupal learning curve @endlink
+ * .
+ */
+function zee_checklist_checklistapi_checklist_info() {
+  $definitions = array();
+  $definitions['zee_checklist'] = array(
+    '#title' => t('Zee Checklist'),
+    '#path' => 'admin/config/development/zee-checklist',
+    '#description' => t('An example implementation of the Checklist API.'),
+    '#help' => t('<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aeque enim contingit omnibus fidibus, ut incontentae sint. Diodorus, eius auditor, adiungit ad honestatem vacuitatem doloris. Itaque sensibus rationem adiunxit et ratione effecta sensus non reliquit. Duo Reges: constructio interrete. Quacumque enim ingredimur, in aliqua historia vestigium ponimus. Certe non potest.</p>'),
+    'users' => array(
+      '#title' => t('Users'),
+      '#description' => t('@todo optimisation sur les comptes utilisateurs'),
+      'delete_test' => array(
+        '#title' => t('Supprimer les comptes <strong>TESTs</strong>'),
+        'handbook_page' => array(
+          '#text' => t('Page d\'administration'),
+          '#path' => 'admin/people',
+        ),
+        'help_page' => array(
+          '#text' => t('Help'),
+          '#path' => 'admin/help/user',
+        ),
+      ),
+      'role_zeemember' => array(
+        '#title' => t('Avoir un rôle Zee Member'),
+        '#description' => t('@todo Rôle spécifique  pour les collaborateurs de l\'agence ZeeAgency'),
+        'handbook_page' => array(
+          '#text' => t('Page d\'administration'),
+          '#path' => 'admin/people/permissions/roles',
+        ),
+        'help_page' => array(
+          '#text' => t('Help'),
+          '#path' => 'admin/help/user',
+        ),
+      ),
+      
+    ),
+    'dev' => array(
+      '#title' => t('Outils de dev'),
+      '#description' => t('@todo ne pas avoir de modules de development activés sur la prod'),
+      'devel' => array(
+        '#title' => t('Disable the Devel module'),
+      ),
+      'coder' => array(
+        '#title' => t('Disable the Coder module'),
+        'handbook_page' => array(
+          '#text' => t('Documentation'),
+          '#path' => 'https://drupal.org/node/144172',
+        ),
+      ),
+      
+    ),
+ 
+  );
+  return $definitions;
+}

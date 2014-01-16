@@ -14,6 +14,10 @@ modules CheckListApi et Variables.
 
 Il permet la création des check-lists directement dans l'interface d'administration de Drupal.
 
+Un exemple complet est celui sur le [SEO](https://drupal.org/project/seo_checklist), où toutes les optimisations pour le référencement d'un site.
+
+[Lien de l'API](http://drupalcode.org/project/checklistapi.git/blob/refs/heads/7.x-1.x:/checklistapi.api.php)
+
 ## Module Variable 
 [Page du module](https://drupal.org/project/variable)
 
