@@ -3,7 +3,7 @@
 #Zee Drupaleurs
 Pendant cette réunion hebdomadaire, l'un des collaborateurs va présenter
 un module utilisant sur l'un de ses derniers projets.
-Et je vais commencer cette nouvelle setion par la présentation de 2
+Et je vais commencer cette nouvelle section par la présentation de 2
 modules CheckListApi et Variables.
 
 
@@ -14,7 +14,7 @@ modules CheckListApi et Variables.
 
 Il permet la création des check-lists directement dans l'interface d'administration de Drupal.
 
-Un exemple complet est celui sur le [SEO](https://drupal.org/project/seo_checklist), où toutes les optimisations pour le référencement d'un site.
+Un exemple complet est celui sur le [SEO](https://drupal.org/project/seo_checklist), avec toutes les optimisations pour le référencement d'un site.
 
 [Lien de l'API](http://drupalcode.org/project/checklistapi.git/blob/refs/heads/7.x-1.x:/checklistapi.api.php)
 
