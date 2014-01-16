@@ -1,0 +1,112 @@
+<?php
+
+/**
+ * @file zee_variables.module
+ */
+
+
+
+/**
+ * Implements hook_variable_info().
+ */
+function zee_variables_variable_info($options) {
+  // Simple text
+  $variables['zee_variables_text'] = array(
+    'type' => 'text',
+    'title' => t('Simple text', array(), $options),
+    'default' => 'Example text.',
+    'description' => t('Example of text variable.', array(), $options),
+    'required' => TRUE,
+    'group' => 'zee_variables',
+    'token'=>TRUE,
+  );
+  
+  // Text with format
+  $variables['zee_variables_text_format'] = array(
+    'type' => 'text_format',
+    'title' => t('Text format', array(), $options),
+    // The default value may be a string (default format will be added) or
+    // an array with 'format' (format name) and 'value' (string) elements
+    'default' => 'Example text with default format',
+    'description' => t('Example of text variable with text format.', array(), $options),
+    'required' => TRUE,
+    'group' => 'zee_variables',
+  );
+
+   // Bootstrap proxy configuration
+  $variables['zee_variables_boolean'] = array(
+    'title' => t('Test avec un boolean'),
+    'type' => 'boolean',
+    'default' => 0,
+    'group' => 'zee_variables',
+  );
+  // Text with format
+  $variables['zee_variables_select'] = array(
+    'type' => 'select',
+    'title' => t('Test avec un menu déroulant', array(), $options),
+    // The default value may be a string (default format will be added) or
+    // an array with 'format' (format name) and 'value' (string) elements
+    'options'=>array('item1'=>'item 1','item2'=>'item 2'),
+    'group' => 'zee_variables',
+  );
+  
+  return $variables;
+}
+
+/**
+ * Implements hook_variable_group_info().
+ */
+function zee_variables_variable_group_info() {
+  $groups['zee_variables'] = array(
+    'title' => t('Zee Variables'),
+    'description' => t('@todo Zee Variables'),
+    'access' => 'administer site configuration',
+    'path' => array('admin/config/system/variable/zee'),
+  );
+  return $groups;
+}
+
+
+
+/**
+ * Définit d'un nouveau block zee_variables
+ * @return [type] [description]
+ */
+function zee_variables_block_info(){
+   $blocks['zee_variables'] = array(
+    'info' => t('Example Zee Variables'),
+    'cache' => DRUPAL_NO_CACHE,
+    // todo: Ajouter l'information du theme
+    // todo: Activation automatique 
+  );
+   return $blocks;
+
+}
+/**
+ * Définir le contenu de ce nouveau bloc
+ * @param  string $delta [description]
+ * @return [type]        [description]
+ */
+function zee_variables_block_view($delta = ''){
+  $block = array();
+  switch ($delta) {
+    case 'zee_variables':
+      $block['subject'] = t('Example Zee Variables');
+      $block['content'] = _zee_variables_content_block();
+      break;
+  }
+  return $block;
+}
+/**
+ * Contenu d'un block se trouvant dans le thème seven
+ * @return [type] [description]
+ */
+function _zee_variables_content_block(){
+  $items = array();
+  $items[] = variable_get_value('zee_variables_text');
+  $items[] = variable_get_value('zee_variables_text_format')['value'];
+  $items[] = variable_get_value('zee_variables_select');
+
+  return theme('item_list', array('items'=>$items));
+}
+

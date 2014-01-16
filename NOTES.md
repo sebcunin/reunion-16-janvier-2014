@@ -37,4 +37,4 @@ Des exemples
 - menu dropdown (menu déroulant)
 - fichier ??? (je sais pas si cela est possbible).
 
-
+@todo voir le submodule variable_views

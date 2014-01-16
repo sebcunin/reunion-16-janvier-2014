@@ -1,1 +1,7 @@
-name:Zee Variables
+name = Zee Variable
+description = @todo
+core = 7.x
+package = Zee
+
+dependencies[] = variable
+dependencies[] = variable_admin
