@@ -23,6 +23,7 @@ function zee_checklist_checklistapi_checklist_info() {
       '#description' => t('@todo optimisation sur les comptes utilisateurs'),
       'delete_test' => array(
         '#title' => t('Supprimer les comptes <strong>TESTs</strong>'),
+        '#default_value' => TRUE,
         'handbook_page' => array(
           '#text' => t('Page d\'administration'),
           '#path' => 'admin/people',
